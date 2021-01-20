@@ -1,0 +1,22 @@
+{
+	"projectName": "sw-techie",
+	"licenseText": "proprietary",
+	"pkgs": [{
+		"name": "sw-techie CSS",
+		"file": "sw-techie.css",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.css",
+			"path": "themes/"
+		}]
+	}, {
+		"name": "sw-techie JS",
+		"file": "sw-techie.js",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.js",
+			"path": "themes/"
+		}]
+	}],
+	"resources" : []
+}
