@@ -1,6 +1,6 @@
 {
 	"name": "tulparstudyo/sw-techie",
-	"description": "Aimeos sw-techie extension tulparstudyo",
+	"description": "Aimeos sw-techie extension",
 	"keywords": ["aimeos", "extension"],
 	"type": "aimeos-extension",
 	"license": "LGPL-3.0",
