@@ -1,7 +1,7 @@
 <?php
 namespace Swordbros;
 class Techie {
-
+    const  name = 'techie';
     public static function composerUpdate() {
 
 // rotes files
@@ -19,7 +19,7 @@ class Techie {
         }   
 // balde files
         echo "::: BLADE FILES SETUP :::\r\n";
-        $dst = resource_path() . '/views';
+        $dst = resource_path() ;
         if(!is_dir($dst)){
             @mkdir($dst); 
         }
@@ -37,7 +37,7 @@ class Techie {
             @mkdir($dst); 
         }
         $src = dirname( __FILE__ ) . '/../view/swordbros';
-        if(is_dir($dst.'/shop/themes/techie')){
+        if(is_dir($dst.'/shop/themes/'.self::name)){
             echo "$dst allready exists \r\n";
         } else{
             if(is_dir($src)){
