@@ -17,12 +17,13 @@ use Illuminate\Support\Facades\Cookie;
 Auth::routes();
 if(class_exists('Request')){
     $locale = \Cookie::get('locale', 'ru');
-    \Request::merge(['locale'=> $locale ]);
-    $currency = \Cookie::get('currency', 'USD');
+    \Request::merge(['locale'=> $locale]);
+    $currency = \Cookie::get('currency', 'RUB');
     \Request::merge(['currency'=> $currency]);
 }
+
 Route::get('/', '\Aimeos\Shop\Controller\CatalogController@homeAction')->name('aimeos_home');
-//Route::get('/postcontent', '\Aimeos\Client\Html\Swordbros\Swpost\Standard@getPostContent')->name('swpost_content');
+
 
 if (!empty($_POST['current-password'])) {
 Route::post('/profile','changePasswordController@changePassword');
@@ -31,6 +32,8 @@ Route::post('/profile','changePasswordController@changePassword');
 if (!empty($_POST['current-pass'])) {
     Route::post('/profile','changePasswordController@changeEmail');
 }
+
+
 
 Route::get('auth/google', 'GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'GoogleController@handleGoogleCallback');
